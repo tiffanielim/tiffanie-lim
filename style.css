@@ -1,0 +1,638 @@
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ----------------------- GLOBAL ------------------------ */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+* {
+ margin: 0;
+ padding: 0; 
+}
+
+body {
+  font-family: Futura, sans-serif;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+.button {
+  transition: all 300ms ease;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ---------------------- NAVIGATION ------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+
+/* ------------------------------------------------------- */
+/* ---------------------- Desktop Nav ------------------- */
+/* ------------------------------------------------------- */
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  background-color: black;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #d9edc6;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+
+/* ------------------------------------------------------- */
+/* ----------------------- Mobile Nav -------------------- */
+/* ------------------------------------------------------- */
+
+#hamburgerNav {
+  display: none;
+  background-color: black;
+  width: 100%;
+}
+
+#hamburgerNavWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.hamburgerMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.hamburgerIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 34px;
+  cursor: pointer;
+}
+
+.hamburgerIcon span {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3 ease-in-out;
+}
+
+.menuLinks {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background-color: black;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menuLinks a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  transition: all 0.3 ease-in-out;
+}
+
+.menuLinks a:hover {
+  color: #d9edc6;
+}
+
+.menuLinks li {
+  list-style: none;
+}
+
+.menuLinks.open {
+  max-height: 300px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  z-index: 999;
+}
+
+.hamburgerIcon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburgerIcon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerIcon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburgerIcon span:first-child {
+  opacity: 1;
+  transform: none;
+}
+
+/* ------------------------------------------------------- */
+/* -------------------------- ICONS --------------------- */
+/* ------------------------------------------------------- */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+.arrowContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow { /* whatever it's positioned to, MUST have position: relative;*/
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  height: 2rem;
+}
+
+/* ------------------------------------------------------- */
+/* -------------------------- Buttons --------------------- */
+/* ------------------------------------------------------- */
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.buttonColor1,
+.buttonColor2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.buttonColor1 {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.buttonColor1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.buttonColor2 {
+  /* background: none;
+  color: inherit; */
+  background-color: white;
+}
+
+.buttonColor2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+/* ----------------------- SECTIONS -------------------- */
+/* ------------------------------------------------------- */
+/* ------------------------------------------------------- */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.sectionContainer {
+  display: flex;
+}
+
+.sectionPictureContainer {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.sectionText {
+  align-self: center;
+  text-align: center;
+}
+
+.sectionTextP {
+  font-weight: 600;
+}
+
+.sectionTextP1 {
+  text-align: center;
+}
+
+.sectionTextP2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* ------------------------------------------------------- */
+/* -------------------------- Landing --------------------- */
+/* ------------------------------------------------------- */
+
+#landing {
+  margin: 4rem;
+}
+
+.laptop-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 5rem;
+  height: 600px;
+}
+
+.icon-item {
+  position: absolute;
+  width: 120px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.icon-item img {
+  width: 120%;
+  height: 120%;
+}
+
+.minecraft {
+  top: 15%;
+  left: 10%;
+}
+
+.vscode {
+  top: 5%;
+  left: 30%;
+}
+
+.calendar {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.figma {
+  top: 5%;
+  right: 30%;
+}
+
+.pinterest {
+  top: 15%;
+  right: 10%;
+}
+
+.laptop-container {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.laptop {
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+}
+
+/* ------------------------------------------------------- */
+/* -------------------------- About Me -------------------- */
+/* ------------------------------------------------------- */
+
+#aboutMe {
+  padding: 4rem 2rem;
+  background-color: white;
+  position: relative;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.photoSide img {
+  max-width: 25vw;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.textSide {
+  max-width: 600px;
+}
+
+.textSide h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.textSide p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------- */
+/* ----------------------- Experience -------------------- */
+/* ------------------------------------------------------- */
+
+#experience {
+  padding: 4rem 2rem;
+  background-color: white;
+  position: relative;
+}
+
+.experienceImg {
+  border-radius: 2rem;
+  width: 30vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: black;
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.timelineLeft,
+.timelineRight {
+  width: 45%;
+}
+
+.timelineLeft {
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.timelineRight {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%, 0);
+  width: 16px;
+  height: 16px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.experienceDate {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timelineRight ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+/* ------------------------------------------------------- */
+/* ------------------------- Projects --------------------- */
+/* ------------------------------------------------------- */
+
+#projects {
+  position: relative;
+  margin: 2rem;
+}
+
+.projectCardsContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap; /* allows them to wrap on smaller screens */
+  margin-top: 2rem;
+}
+
+.detailsContainer {
+  padding: 1.5rem;
+  flex: 3;
+  background: white;
+  border-radius: 2rem;
+  width: 15rem;
+  border: white 0.1rem solid;
+  border-color: white;
+  text-align: center;
+}
+
+.colorContainer {
+  border-color: black;
+  background: #d9edc6;
+  /* background: #d5edc8; */
+}
+
+.projectImg {
+  border-radius: 2rem;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.projectTitle {
+  margin: 1rem;
+  color: black;
+}
+
+.projectButton {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+.experienceSubTitle {
+  color: black;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experienceDetailsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.articleContainer {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+  gap: 0.5rem;
+}
+
+/* ------------------------------------------------------- */
+/* ----------------- Awards & Classes Taken -------------- */
+/* ------------------------------------------------------- */
+
+
+#awards {
+  padding: 4rem 2rem;
+  background-color: white;
+  position: relative; /* otherwise position: absolute won't work */
+}
+
+.awards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.textSide h1 {
+  padding-top: 1rem;
+}
+
+.textSide ul {
+  padding-left: 3rem;
+}
+
+/* ------------------------------------------------------- */
+/* ---------------------- Contact Me --------------------- */
+/* ------------------------------------------------------- */
+
+#contact {
+  display: flex;
+  /* justify-content: center;  */ /* too much space left over from awards section so it makes it look too empty*/
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contactInfoUpperContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: black 0.1rem solid;
+  border-color: black;
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contactInfoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contactIcon {
+  cursor: default;
+}
+
+#contact a{
+  color: black;
+}
+
+#contact a:hover {
+  color: #d9edc6;
+}

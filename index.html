@@ -1,0 +1,275 @@
+<!-- -------------------------------------------------------------------- -->
+<!--
+
+-->
+<!-- -------------------------------------------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaQueries.css" />
+</head>
+<body>
+  <nav id = "desktopNav">
+    <div class = "logo">Tiffanie</div>
+    <div>
+      <ul class = "nav-links">
+        <!-- <li><a href="#landing">Home</a></li> -->
+        <li><a href="#aboutMe">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#awards">Awards and Classes Taken</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id = "hamburgerNav">
+    <div id = "hamburgerNavWrapper">
+    <div class = "logo">Tiffanie</div>
+    <div class = "hamburgerMenu">
+      <div class = "hamburgerIcon" onclick = "toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class = "menuLinks">
+        <!-- <li><a href="#landing" onclick = "toggleMenu()">Home</a></li> -->
+        <li><a href="#aboutMe" onclick = "toggleMenu()">About Me</a>></li>
+        <li><a href="#experience" onclick = "toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick = "toggleMenu()">Projects</a></li>
+        <li><a href="#awards" onclick = "toggleMenu()">Awards and Classes Taken</a></li>
+        <li><a href="#contact" onclick = "toggleMenu()">Contact Me</a></li>
+      </div>
+    </div>
+    </div>
+  </nav>
+    
+    <!-- <section id="landing">
+        <h1>hi, this is what's on my laptop...</h1>
+        <div id = "landingWrapper">
+            <div class="icon-item minecraft">
+                <p>the game that<br>started it all &lt;3</p>
+                <img src="images/minecraftLogo.png" alt="Minecraft Icon" />
+              </div>
+          
+              <div class="icon-item vscode">
+                <p>my favorite!<br>CLion for C++ though &gt;&gt;</p>
+                <img src="images/vscode.png" alt="VS Code Icon" />
+              </div>
+          
+              <div class="icon-item calendar">
+                <p>the love of my life,<br>keeps me organized<br>(and sane)</p>
+                <img src="images/googleCalendar.png" alt="Google Calendar Icon" />
+              </div>
+          
+              <div class="icon-item figma">
+                <p>let me just say,<br>thank you.</p>
+                <img src="images/figma.png" alt="Figma Icon" />
+              </div>
+          
+              <div class="icon-item pinterest">
+                <p>when am I not<br>on Pinterest…</p>
+                <img src="images/pinterest.png" alt="Pinterest Icon" />
+              </div>
+            
+              <div class = "laptop-container">
+                <img class = "laptop" src="images/macbook.png" alt="MacBook" />
+            </div>
+        </div>
+    </section> -->
+
+
+  <section id="aboutMe">
+      <div class = "about">
+          <div class = "photoSide">
+              <img src ="images/aboutMe.png" alt="A picture of a smiski using a laptop with Tiffanie's head photoshopped on top.">
+          </div>
+          <div class = "textSide"> 
+              <h1>About Me</h1>
+              <p>
+                Hi! My name is Tiffanie and I’m excited to meet you :)<br><br>
+                I’m a 2nd-year CS student at Pasadena City College, planning to transfer this fall. I’m interested in software engineering, especially on the product side. I love thinking about how to build things that are both useful and intuitive for real people.<br><br>
+                In my free time, I code fun side projects, collect Smiskis (as you can see on the left), and try way too many restaurants. I’m a huge foodie, so feel free to talk to me about food recs anytime!<br><br>
+                Keep scrolling to learn more :)
+              </p>
+          </div>
+      </div>
+      <div class="arrowContainer">
+        <img src="images/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#experience'">
+      </div>
+  </section>
+
+  <section id="experience">
+      <h1 class="title">My Experience</h1>
+      <div class="timeline">
+    
+        <div class="timelineItem">
+          <div class="timelineLeft">
+            <p class="experienceDate">2024</p>
+            <h2>Software Engineer Intern</h2>
+            <p>Pasadena City College<br>Pasadena, CA</p>
+          </div>
+          <div class="timelineDot"></div>
+          <div class="timelineRight">
+            <img src = "images/PCCInternship.png" class = "experienceImg">
+            <ul>
+              <li>Helped design and build a mobile app UI for 20,000+ students.</li>
+              <li>Collaborated with engineers and designers using HTML, CSS, and JavaScript.</li>
+              <li>Designed wireframes and UML diagrams in Figma with backend teams.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineLeft">
+            <p class="experienceDate">2025</p>
+            <h2>Research Intern</h2>
+            <p>UT Austin Texas Advanced Computing Center (TACC)<br>Atlanta, GA</p>
+          </div>
+          <div class="timelineDot"></div>
+          <div class="timelineRight">
+            <!-- <img src = "images/ACSCphoto.png" class = "experienceImg"> -->
+            <img src = "images/ACSCResearch.png" class = "experienceImg">
+            <ul>
+              <li>Presented research to improve emergency alert systems for elderly populations at SCTE 2024.</li>
+              <li>Conducted large-scale data analysis on social media trends using Python and Jupyter Notebook.</li>
+              <li>Leveraged Frontera, a high-performance supercomputer, for data processing and visualization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timelineItem">
+          <div class="timelineLeft">
+            <p class="experienceDate">2025</p>
+            <h2>Software Engineer Intern</h2>
+            <p>LA Tech<br>Los Angeles, CA</p>
+          </div>
+          <div class="timelineDot"></div>
+          <div class="timelineRight">
+            <img src = "images/LATech.png" class = "experienceImg">
+            <ul>
+              <li>Led weekly study sessions focused on debugging and system design, boosting team confidence and problem-solving speed.</li>
+              <li>Facilitated technical discussions and supported peers in troubleshooting and reinforcing core programming concepts.</li>
+              <li>Selected as Product Manager for an 8-person team — 1 of 6 chosen from a cohort of 48.</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="arrowContainer">
+        <img src="images/arrow.png" alt="arrow icon" class = "icon arrow" onclick="location.href='#projects'">
+      </div>
+  </section>
+
+  <section id = "projects">
+      <p class = "sectionTextP1">Browse My Favorite</p>
+      <h1 class = "title">Projects</h1>
+      <div class="projectCardsContainer">
+        <div class = "detailsContainer colorContainer">
+          <div class = "articleContainer">
+            <img src="images/photoBoothDemo.png" alt="project 1: photobooth" class ="projectImg">
+          </div>
+        <h2 class = "experienceSubTitle projectTitle">PhotoBooth</h2>
+
+        <div class = "buttonContainer">
+          <button class = "button buttonColor2 projectButton" onclick = "location.href='https://github.com/tiffanielim/photobooth'">Github</button>
+          <button class = "button buttonColor2 projectButton" onclick = "location.href='https://tiffanielim.github.io/photobooth/'">Live Demo</button>
+        </div>
+        </div>
+        <div class = "detailsContainer colorContainer">
+
+          <div class = "articleContainer">
+            <img src="images/tetrisDemo.png" alt="project 2: tetris" class ="projectImg">
+          </div>
+        <h2 class = "experienceSubTitle projectTitle">Tetris</h2>
+        <div class = "buttonContainer">
+          <button class = "button buttonColor2 projectButton" onclick = "location.href='https://github.com/tiffanielim/tetris'">Github</button>
+        </div>
+        </div>
+        <div class = "detailsContainer colorContainer">
+
+          <div class = "articleContainer">
+            <img src="images/AutocorrectDemo.png" alt="project 3" class ="projectImg">
+          </div>
+        <h2 class = "experienceSubTitle projectTitle">Autocorrect</h2>
+        <div class = "buttonContainer">
+          <button class = "button buttonColor2 projectButton" onclick = "location.href='https://github.com/tiffanielim/photobooth'">Github</button>
+        </div>
+        </div>
+      </div>
+
+      <div class="arrowContainer">
+        <img src="images/arrow.png" alt="arrow icon" class = "icon arrow" onclick="location.href='#awards'">
+      </div>
+  </section>
+
+  <section id="awards">
+    <div class = "awards">
+        <div class = "textSide"> 
+            <h1>Awards & Achievements</h1>
+              <ul>
+                <li>Walter T. Shatford Scholarship Recipient</li>
+                <li>PCC PAPPI Scholarship Recipient</li>
+                <li>George and Ruri Sugimoto Scholarship Recipient</li>
+                <li>Honors Program</li>
+                <li>MESA Scholar</li>
+              </ul>
+              <h1>Classes Taken</h1>
+              <ul>
+                <li>Data Structures (C++)</li>
+                <li>Discrete Mathematics</li>
+                <li>Linear Algebra</li>
+                <li>Differential Equations</li>
+              </ul>
+        </div>
+
+    </div>
+    <div class="arrowContainer">
+      <img src="images/arrow.png" alt="arrow icon" class = "icon arrow" onclick="location.href='#contact'">
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class = "sectionTextP1">Get in Touch</p>
+    <h1 class = "title">Contact Me</h1>
+    <div class = "contactInfoUpperContainer">
+      <div class = "contactInfoContainer">
+        <img src = "images/email.png" alt="email icon" class = "icon contactIcon">
+        <p><a href = "mailto:tiffanielim3147@gmail.com">tiffanielim3147@gmail.com</a></p>
+      </div>
+
+      <div class = "contactInfoContainer">
+        <img src = "images/linkedin.png" alt="Linkedin icon" class = "icon contactIcon">
+        <p><a href = "https://www.linkedin.com/in/tiffanie-lim/">LinkedIn</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <nav id = "desktopNav">
+      <div class = "logo">Tiffanie</div>
+      <div>
+        <ul class = "nav-links">
+          <li><a href="#landing">Home</a></li>
+          <li><a href="#aboutMe">About Me</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#awards">Awards and Classes Taken</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

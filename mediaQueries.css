@@ -1,0 +1,47 @@
+@media screen and (max-width: 1200px) {
+    #desktopNav {
+        display: none;
+    }
+    
+    #hamburgerNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+
+    .about {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: auto;
+        padding-top: 6rem;
+        flex-wrap: wrap; /* so it stacks on smaller screens */
+    }
+      
+    .photoSide img {
+        width: 100%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .textSide h1 {
+        font-size: 2rem;
+    }
+    
+    .textSide p {
+        font-size: 1rem;
+    }
+
+    .experienceDetailsContainer {
+        flex-direction: column;
+    }
+}
